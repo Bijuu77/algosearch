@@ -1,0 +1,26 @@
+FUNCTION sorted_card(cards, newCard) : ARRAY_OF INTEGER[length];
+VAR
+    cards:ARRAY_OF INTEGER[n];
+    result: ARRAY_OF INTEGER [];
+    n,i; INTEGER;
+BEGIN
+    result := []  
+    i := 0 
+    WHILE (i < n) DO
+        IF (card[i] <= newCard) THEN
+            result.push(cards[i]);
+        ELSE
+            result.push(newCard);
+            break;
+        END_IF
+    END_WHILE
+
+    // Ajouter les cartes restantes dans cards au tableau résultat
+
+    WHILE (i < n) DO 
+        result.push(cards[i]);
+        i := i + 1
+    END_WHILE
+
+    RETURN result;
+END
